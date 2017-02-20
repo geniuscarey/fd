@@ -2,7 +2,7 @@ package main
 
 import (
     "fmt"
-    "fd/gossip"
+    "github.com/geniuscarey/fd/gossip"
 )
 
 func main() {
