@@ -6,8 +6,8 @@ import (
 
 const (
     SAMPLE_SIZE = 1000
-    INITIAL_VALUE_NANOS = 100000000 //0.1s 
-    MAX_INTERVAL_NANOS = 100000000 //0.1s 
+    INITIAL_VALUE_NANOS = 100000000 //0.1s
+    MAX_INTERVAL_NANOS = 100000000 //0.1s
 )
 
 var (
@@ -67,8 +67,8 @@ func (aw *ArrivalWindow) Add(value int64, ep InetAddress) {
         if interval_ns <= MAX_INTERVAL_NANOS {
             aw.arrivalIntervals.Add(interval_ns)
         }
+        aw.tLast = value
     }
-    aw.tLast = value
 }
 
 type FailureDetector struct {

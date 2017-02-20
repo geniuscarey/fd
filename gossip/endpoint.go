@@ -35,6 +35,10 @@ func (e *Endpoint) GetHeartbeat() Heartbeat {
     return e.hb
 }
 
+func (e *Endpoint) UpdateHeartbeat() {
+    e.hb.Update()
+}
+
 func (e *Endpoint) SetHeartbeat(nhb Heartbeat) {
     e.hb = nhb
 }
